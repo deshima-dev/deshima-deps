@@ -1,0 +1,26 @@
+{
+    "name": "deshima-deps",
+    "image": "ghcr.io/astral-sh/uv:python3.12-bookworm",
+    "runArgs": [
+        "--name=deshima-deps"
+    ],
+    "containerEnv": {
+        "UV_PROJECT_ENVIRONMENT": "/usr/local"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "charliermarsh.ruff",
+                "tamasfe.even-better-toml"
+            ],
+            "settings": {
+                "files.insertFinalNewline": true,
+                "files.trimTrailingWhitespace": true,
+                "[python]": {
+                    "editor.defaultFormatter": "charliermarsh.ruff",
+                    "editor.formatOnSave": true
+                }
+            }
+        }
+    }
+}
